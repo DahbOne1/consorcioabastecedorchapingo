@@ -1,0 +1,33 @@
+---
+import Aim from "./icons/Aim.astro"
+import Goals from "./icons/Goals.astro"
+---
+<section class="py-20 flex px-8">
+    <article class="w-1/2 p-4">
+        <h2 class="font-extrabold text-8xl">NOSOTROS</h2>
+        <p class="mt-8 text-2xl text-pretty">Somos una empresa mexicana dedicada a ofrecer diferentes servicios de construcción con un buen desempeño y la mejor calidad y profesionalismo que nos caracteriza siendo responsables y éticos con nuestros clientes.</p>
+    </article>
+    <article class="w-1/2 flex flex-col gap-4">
+        <div class=" bg-[#f1f1f1] rounded-lg flex justify-center items-center p-4 gap-3">
+            <span class="flex flex-col justify-center items-center w-1/5">
+                <Aim class="block mx-auto"></Aim>
+                <h2 class="block text-2xl font-bold mt-2">Objetivo</h2>
+            </span>
+            
+            <p class="block w-4/5 text-sm">Escuchar con atención a los clientes para entender realmente sus necesidades, porque para nuestra empresa es esencial proporcionar soluciones que se traduzcan en éxito, y así satisfacer a nuestros clientes con un proyecto de su entera satisfacción.						
+            </p>
+        </div>
+        <div class=" bg-[#f1f1f1] rounded-lg flex justify-center items-center p-4 gap-3">
+            <span class="flex flex-col justify-center items-center w-1/5">
+                <Goals></Goals>
+                <h2 class="block text-2xl font-bold mt-2">Metas</h2>
+            </span>
+            
+            <ul class="block w-4/5 text-sm list-disc">
+                <li>Realizar las metas propuestas en el ámbito laboral, trabajando bajo una misma visión y alcanzar las metas establecidas.</li>
+                <li>Proponer alternativas que permitan un mejor desarrollo en cada uno de los objetivos.</li>
+                <li>Realizar con buen desempeño y de la mejor calidad todos nuestros trabajos.</li>
+            </ul>
+        </div>
+    </article>
+</section>

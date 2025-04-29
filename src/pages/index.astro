@@ -1,115 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Section from '../components/Section.astro';
 import Footer from '../components/Footer.astro';
 import Goals from '../components/icons/Goals.astro';
 import Aim from '../components/icons/Aim.astro'
 import Person from '../components/icons/Person.astro';
+import Hero	 from '../components/Hero.astro';
+import AboutUs from '../components/AboutUs.astro';
+import Services from '../components/Services.astro';
+import Projects from '../components/Projects.astro'
+import ContactUs from '../components/ContactUs.astro'
 ---
 
 <Layout title="Consorcio Abastecedor Chapingo S.A. de C.V.">
 	<main>
-		<Header></Header>
-		<body>
-			<section id="inicio">
-				
-				<article class="w-full flex">
-					
-					<div class="bg-[url('../img/portada.webp')] w-5/12  bg-cover bg-right-top brightness-50 ">
-					</div>
-					<div class="w-7/12  py-32 pl-6 bg-[#db7c48] text-[#f1f1f1]"> 
-						<span class="text-6xl font-bold">
-							Consorcio Abastecedor Chapingo S.A. de C.V.
-						</span>
-						<span class="text-xl block pt-8 pb-4 w-2/3">La mejor calidad y profesionalismo en diferentes servicios de construcción.</span>
-
-					</div>
-					
-				</article>
-			</section>
-
-			<section id="nosotros">
-				<article class="flex gap-20 py-14 justify-center text-justify bg-[#f1f1f1] text-[#244974]">
-					<div class="w-5/12 ">
-						<span class="flex flex-col items-center">
-							<Aim></Aim>
-							<h2 class="block text-2xl font-semibold mt-2">Objetivo</h2>
-						</span>
-						
-						<p class="mt-8 text-sm">La continuación de nuestro éxito depende del aumento de la lealtad de nuestros clientes.  
-							<br>
-							Escuchar con atención a los clientes para entender realmente sus necesidades, porque para nuestra empresa es esencial proporcionar soluciones que se traduzcan en éxito, y así satisfacer a nuestros clientes con un proyecto de su entera satisfacción.
-							<br>
-							Realizar con buen desempeño y de la mejor calidad todos nuestros trabajos.							
-						</p>
-					</div>
-					<div class="w-5/12 ">
-						<span class="flex flex-col items-center">
-							<Goals></Goals>
-							<h2 class="block text-2xl font-semibold mt-2">Metas</h2>
-						</span>
-						
-						<p class="mt-8 text-sm">
-							Realizar las metas propuestas en el ámbito laboral, trabajando bajo una misma visión y alcanzar las metas establecidas. 
-							<br>
-							Así como proponer alternativas que permitan un mejor desarrollo en cada uno de los objetivos.
-						</p>
-					</div>
-				</article>
-				<article class="bg-[#274871] p-16">
-					<h2 class="font-semibold text-4xl text-center text-[#f1f1f1]">Organigrama</h2>
-					<div class="flex flex-col width-11/12 gap-y-5 mt-20 text-[#274871]">
-						<div class="bg-[#f1f1f1] py-4 flex gap-4 px-6 mx-auto justify-center items-center rounded-md">
-							<Person></Person>
-							<span>
-								<h5 class="font-semibold text-lg">Administrador único</h5>
-								<p class="text-sm">Arq. Urbano Daniel Hernández Antunez</p>
-							</span>
-						</div>
-						<hr>
-						<div class="bg-[#f1f1f1] py-4 flex gap-4 px-6 mx-auto justify-center items-center rounded-md">
-							<Person></Person>
-							<span>
-								<h5 class="font-semibold text-lg">Superintendente de obra</h5>
-								<p class="text-sm">Arq. Johnny Chacon Gramajo</p>
-							</span>
-						</div>
-						<hr>
-						<div class="flex justify-center items-center bg-[#f1f1f1] py-4 gap-4 px-6 mx-auto rounded-md">
-							<div class="bg-[#f1f1f1] py-4 flex gap-4 px-6 mx-auto justify-center items-center rounded-md">
-								<Person></Person>
-								<span>
-									<h5 class="font-semibold text-lg">Administración y finanzas</h5>
-									<p class="text-sm">Maribel Reyes Muñoz</p>
-								</span>
-							</div>
-							<div class="bg-[#f1f1f1] py-4 flex gap-4 px-6 mx-auto justify-center items-center rounded-md">
-								<Person></Person>
-								<span>
-									<h5 class="font-semibold text-lg">Coordinación de obras</h5>
-									<p class="text-sm">Ing. Miguel Espiritu Ortega</p>
-								</span>
-							</div>
-							<div class="bg-[#f1f1f1] py-4 flex gap-4 px-6 mx-auto justify-center items-center rounded-md">
-								<Person></Person>
-								<span>
-									<h5 class="font-semibold text-lg">Proyectos</h5>
-									<p class="text-sm">Ing. Joaquín Temiquel Ortiz</p>
-								</span>
-							</div>
-						</div>
-						<hr>
-						<div class="bg-[#f1f1f1] py-4 flex gap-4 px-6 mx-auto justify-center items-center rounded-md">
-							<Person></Person>
-							<span>
-								<h5 class="font-semibold text-lg">Residente</h5>
-								<p class="text-sm">Arq. Omar Andres Luna Mendez</p>
-							</span>
-						</div>
-					</div>
-				</article>
-			</section>
+		<body>	
+			<Hero id="inicio"></Hero>
+			<AboutUs id="nosotros"></AboutUs>
+			<Services id="servicios"></Services>
+			<Projects id="proyectos"></Projects>
+			<ContactUs id="contacto"></ContactUs>
 
 			<section class="py-14 " id="servicios">
 				<h2 class="font-semibold text-4xl text-center text-[#274871]">Servicios</h2>
@@ -121,9 +30,4 @@ import Person from '../components/icons/Person.astro';
 </Layout>
 
 
-<style>
-	#inicio span{
-		text-shadow: 4px 4px 11px rgba(14, 48, 218, 0.18);
-	}
-</style>
 
