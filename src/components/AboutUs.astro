@@ -1,8 +1,9 @@
 ---
 import Aim from "./icons/Aim.astro"
 import Goals from "./icons/Goals.astro"
+const {id} = Astro.props;
 ---
-<section class="py-20 flex px-8">
+<section id={id} class="py-20 flex px-8">
     <article class="w-1/2 p-4">
         <h2 class="font-extrabold text-8xl">NOSOTROS</h2>
         <p class="mt-8 text-2xl text-pretty">Somos una empresa mexicana dedicada a ofrecer diferentes servicios de construcción con un buen desempeño y la mejor calidad y profesionalismo que nos caracteriza siendo responsables y éticos con nuestros clientes.</p>
@@ -31,3 +32,25 @@ import Goals from "./icons/Goals.astro"
         </div>
     </article>
 </section>
+
+<style>
+    section{
+        animation: reveal ease-in-out both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 40%;
+    }
+    
+    
+    @keyframes reveal {
+        from {
+            opacity: 0.5;
+            translate: 0px 20px;
+            width: 80%;
+        }
+        to {
+            opacity: 1;
+            translate: 0 0;
+            width: 100%;
+        }
+    }
+    </style>
