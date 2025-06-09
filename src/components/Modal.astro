@@ -1,0 +1,23 @@
+---
+const  { alt, img } = Astro.props;
+---
+
+<article id="modal" class={`fixed inset-0 hidden items-center justify-center bg-gray-800 bg-opacity-50 `}>
+    <div class="flex flex-col bg-[#f1f1f1] p-4 rounded-lg">
+        <img id="imgModal"  class="rounded-lg object-cover w-full h-96">
+        <button  class="closeModal block mt-4 px-4 py-2 text-white rounded-lg bg-[#217aa1] hover:bg-[#217aa1]/80">Cerrar</button>
+    </div>
+   
+</article>
+
+<script>
+     //Cerrar modal
+    const modal = document.getElementById('modal');
+
+    const button = document.querySelector('button.closeModal');
+    button?.addEventListener('click', () => {
+        modal?.classList.add('hidden');
+        modal?.classList.remove('flex');
+    });
+
+</script>

@@ -1,0 +1,24 @@
+---
+import ArrowUpRight from "./icons/Arrow-up-right.astro"
+const  { alt, img } = Astro.props;
+---
+
+<div class="w-full relative lg:w-1/2">
+    <img class="rounded-md" src={img} alt={alt}>
+    <button id={alt} data-img={img} class="openModal absolute right-3 top-3 bg-[#f1f1f1] p-1 rounded-full flex justify-center items-center hover:scale-110 transition-all transition-2s">
+        <ArrowUpRight ></ArrowUpRight>
+    </button>                
+</div>
+
+<script>
+    //Abrir modal
+    const modal = document.getElementById('modal');
+
+    const buttons = document.querySelectorAll('button.openModal');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            modal?.classList.remove('hidden');
+            modal?.classList.add('flex');
+        });
+    });
+</script>

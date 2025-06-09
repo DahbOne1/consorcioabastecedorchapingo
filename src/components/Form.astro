@@ -1,15 +1,17 @@
 ---
 
 ---
-<form class="bg-[#f1f1f1] rounded-lg flex flex-col p-8 w-full" action="">
+<form action="https://formsubmit.co/4f487581eed9362168ebccb1b57f6779" method="post"  class="bg-[#f1f1f1] rounded-lg flex flex-col p-8 w-full shadow-xl" action="">
     <label  for="">Nombre
-        <input class="block mt-1 border-solid border-2 bg-[#f1f1f1] rounded-md border-[#23467b] p-2 w-full" autofocus type="text" >
+        <input class="block mt-1 border-solid border-2 bg-[#f1f1f1] rounded-md border-[#23467b] p-2 w-full" autofocus type="text" pattern="^[a-zA-Z\u00C0-\u00FF\s]+$" name="nombre" required>
     </label>
     <label class="mt-2" for="">Correo electrónico
-        <input class="block mt-1 border-solid border-2 bg-[#f1f1f1] rounded-md border-[#23467b] p-2 w-full" autofocus type="text">
+        <input class="block mt-1 border-solid border-2 bg-[#f1f1f1] rounded-md border-[#23467b] p-2 w-full" autofocus type="text" name="correo" required>
     </label>
     <label class="mt-2" for="">Mensaje
-        <textarea class="block mt-1 border-solid border-2 bg-[#f1f1f1] rounded-md border-[#23467b] p-2 w-full max-h-16" autofocus></textarea>
+        <textarea class="block mt-1 border-solid border-2 bg-[#f1f1f1] rounded-md border-[#23467b] p-2 w-full max-h-16" name="mensaje" autofocus required></textarea>
     </label>
-    <button class="bg-[#db7c48] text-[#23467b] py-2 font-bold mt-5 rounded-md :">ENVIAR</button>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+    <button class="bg-[#db7c48] text-[#23467b] py-2 font-bold mt-5 rounded-md hover:bg-[#23467b] hover:text-[#db7c48] transition-all transitions-2s">ENVIAR</button>
 </form>
